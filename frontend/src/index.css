@@ -7,19 +7,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-header {
-  background-color: #404040;
-  padding: 1rem;
+.site-container {
+  min-height: 100vh; /* we say here to use the entire viewport height, viewport is the visible area of the browser window */
 }
 
 main {
-  padding: 1rem;
-}
-
-header a {
-  color: white;
-  font-weight: bold;
-  text-decoration: none; /* Quitar formato de enlace */
+  flex: 1; /* we say here to main to use 1 space between header and footer */
 }
 
 .products {
