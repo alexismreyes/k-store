@@ -12,8 +12,32 @@ header {
   padding: 1rem;
 }
 
+main {
+  padding: 1rem;
+}
+
 header a {
   color: white;
   font-weight: bold;
   text-decoration: none; /* Quitar formato de enlace */
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap; /* if no space, move the next elemente to a new line */
+  justify-content: center; /* moves child elements from this div to the center */
+}
+
+.product {
+  border: 1px #404040 solid;
+  margin: 1rem; /* 1rem space between divs */
+}
+
+.product img {
+  width: 100%; /* this makes the images fit at 100% in our browser instead of showing them in real size */
+  max-width: 400px; /* max widht for img */
+}
+
+.product-info {
+  padding: 1rem;
 }
