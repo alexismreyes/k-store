@@ -3,6 +3,7 @@ import { useEffect, useReducer, useState } from 'react';
 
 import Product from '../components/Product';
 import { Col, Row } from 'react-bootstrap';
+import { Helmet } from 'react-helmet-async';
 
 //import logger from 'use-reducer-logger';
 
@@ -45,6 +46,9 @@ function HomeScreen() {
 
   return (
     <div>
+      <Helmet>
+        <title>K-Store</title>
+      </Helmet>
       <h1>Featured Products</h1>
       <div className="products">
         {loading ? (

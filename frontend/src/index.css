@@ -42,3 +42,7 @@ main {
 .rating span {
   color: #ffc000;
 }
+
+.img-large {
+  max-width: 100%; /* uses the 100% available from the md={6} set in Col component in the ProductScreen*/
+}

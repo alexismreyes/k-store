@@ -23,7 +23,8 @@ function App() {
           </Navbar>
         </header>
         <main>
-          <Container>
+          <Container className="mt-3">
+            {/* class from bootstrap means margin top 3 rem */}
             <Routes>
               <Route path="/product/:slug" element={<ProductScreen />} />
               <Route path="/" element={<HomeScreen />} />
