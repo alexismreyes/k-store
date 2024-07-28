@@ -15,6 +15,10 @@ main {
   flex: 1; /* we say here to main to use 1 space between header and footer */
 }
 
+.my-button-color {
+  background-color: #ffc000;
+}
+
 .products {
   display: flex;
   flex-wrap: wrap; /* if no space, move the next elemente to a new line */
@@ -33,4 +37,8 @@ main {
 
 .product-info {
   padding: 1rem;
+}
+
+.rating span {
+  color: #ffc000;
 }

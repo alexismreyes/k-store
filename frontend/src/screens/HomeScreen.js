@@ -1,7 +1,9 @@
-import { Link } from 'react-router-dom';
-//import data from '../data';
 import axios from 'axios';
 import { useEffect, useReducer, useState } from 'react';
+
+import Product from '../components/Product';
+import { Col, Row } from 'react-bootstrap';
+
 //import logger from 'use-reducer-logger';
 
 const reducer = (state, action) => {
@@ -50,22 +52,14 @@ function HomeScreen() {
         ) : error ? (
           <div>{error}</div>
         ) : (
-          products.map((product, index) => (
-            <div className="product" key={index}>
-              <Link to={`/product/${product.slug}`}>
-                <img src={product.image} alt={product.name} />
-              </Link>
-              <div className="product-info">
-                <Link href={`/product/${product.slug}`}>
-                  <p>{product.name}</p>
-                </Link>
-                <p>
-                  <strong>{product.price}</strong>
-                </p>
-                <button>Add to cart</button>
-              </div>
-            </div>
-          ))
+          <Row>
+            {products.map((product) => (
+              <Col sm={6} md={4} lg={3} className="mb-3" key={product.slug}>
+                {/* Row and Col are react-bootstrap elements, sm={6} renders grid of 6 elements for small screens, md renders grid from 4 elements in mediums screens and so on... next we use class margin button 3 rem mb-3*/}
+                <Product product={product} />
+              </Col>
+            ))}
+          </Row>
         )}
       </div>
     </div>
