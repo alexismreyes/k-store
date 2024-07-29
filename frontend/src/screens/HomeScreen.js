@@ -4,6 +4,8 @@ import { useEffect, useReducer, useState } from 'react';
 import Product from '../components/Product';
 import { Col, Row } from 'react-bootstrap';
 import { Helmet } from 'react-helmet-async';
+import LoadingBox from '../components/LoadingBox';
+import MessageBox from '../components/MessageBox';
 
 //import logger from 'use-reducer-logger';
 
@@ -37,6 +39,7 @@ function HomeScreen() {
         const result = await axios.get('/api/products');
         dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
       } catch (err) {
+        console.log('error found->', err);
         dispatch({ type: 'FETCH_FAIL', payload: err.message });
       }
       //setProducts(result.data);
@@ -52,9 +55,9 @@ function HomeScreen() {
       <h1>Featured Products</h1>
       <div className="products">
         {loading ? (
-          <div>Loading...</div>
+          <LoadingBox />
         ) : error ? (
-          <div>{error}</div>
+          <MessageBox variant="danger">{error}</MessageBox>
         ) : (
           <Row>
             {products.map((product) => (
