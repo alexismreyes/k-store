@@ -48,6 +48,18 @@ const data = {
       numReviews: 10,
       description: 'high quality shirt',
     },
+    {
+      name: 'Puma XL Shirt Woman',
+      slug: 'puma-xl-shirt-w',
+      category: 'Shirt',
+      image: '/images/p5.jpg',
+      price: 45,
+      countInStock: 10,
+      brand: 'Puma',
+      rating: 4.0,
+      numReviews: 6,
+      description: 'high quality woman cotton shirt',
+    },
   ],
 };
 
