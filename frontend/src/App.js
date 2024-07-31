@@ -5,7 +5,7 @@ import ProductScreen from './screens/ProductScreen.js';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import { LinkContainer } from 'react-router-bootstrap';
-import { Badge, CardText, Nav } from 'react-bootstrap';
+import { Badge, Nav } from 'react-bootstrap';
 import { useContext } from 'react';
 import { Store } from './Store.js';
 
@@ -29,7 +29,11 @@ function App() {
                   Cart
                   {cart.cartItems.length > 0 && (
                     <Badge pill bg="danger">
-                      {cart.cartItems.length}
+                      {cart.cartItems.reduce(
+                        //this allow to increase the cart items taking into account the quantity of a same product
+                        (acc, cur) => acc + cur.quantity,
+                        0
+                      )}
                     </Badge>
                   )}
                 </Link>

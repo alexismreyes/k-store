@@ -12,13 +12,19 @@ function reducer(state, action) {
   switch (action.type) {
     case 'CART_ADD_ITEM':
       //Add to cart
-      return {
-        ...state,
-        cart: {
-          ...state.cart,
-          cartItems: [...state.cart.cartItems, action.payload],
-        },
-      };
+      const newItem =
+        action.payload; /* this logic allows to increase the number of items in cart it they are from differente _id */
+      const existItem = state.cart.cartItems.find(
+        /* than means is we are clicking add to cart in the same item just the quantity gets updated not the number of items in cart */
+        (item) => item._id === newItem._id
+      );
+      const cartItems = existItem
+        ? state.cart.cartItems.map((item) =>
+            item._id === existItem._id ? newItem : item
+          )
+        : [...state.cart.cartItems, newItem];
+
+      return { ...state, cart: { ...state.cart, cartItems } };
 
     default:
       return state;
