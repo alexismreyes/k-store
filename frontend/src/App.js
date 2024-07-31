@@ -8,6 +8,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { Badge, Nav } from 'react-bootstrap';
 import { useContext } from 'react';
 import { Store } from './Store.js';
+import CartScreen from './screens/CartScreen.js';
 
 function App() {
   const { state } = useContext(Store);
@@ -46,6 +47,7 @@ function App() {
             {/* class from bootstrap means margin top 3 rem */}
             <Routes>
               <Route path="/product/:slug" element={<ProductScreen />} />
+              <Route path="/cart" element={<CartScreen />} />
               <Route path="/" element={<HomeScreen />} />
             </Routes>
           </Container>
