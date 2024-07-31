@@ -1,5 +1,17 @@
 import express from 'express';
 import data from './data.js';
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+
+dotenv.config(); //loads the .env
+mongoose
+  .connect(process.env.MONGODB_URI)
+  .then(() => {
+    console.log('Everything is OK with Atlas!!!');
+  })
+  .catch((err) => {
+    console.log('Something went wrong with Atlas!!!');
+  }); //connect to string
 
 const app = express();
 
