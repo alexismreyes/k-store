@@ -61,7 +61,7 @@ Its made using MERN (Mongo - Express.js - React - Node.js) - (**_I'm currently w
 ### Create your own .env file for database credentials
 
 - Create a .env file inside backend
-- Create a MONGODB_URI for mongo's connection string, you can create an online mongo db at atlas or using a local version or dockerized one (docker-compose.yml already provided at backend folder just use command -> **_docker-compose up -d_**).
+- Create a MONGODB*URI for mongo's connection string, you can create an online mongo db at atlas or using a local version or dockerized one (docker-compose.yml already provided at backend folder just use command -> \*\*\_docker-compose up -d*\*\*).
 
 - .env-example is provided in the code repo
 
@@ -86,3 +86,23 @@ Its made using MERN (Mongo - Express.js - React - Node.js) - (**_I'm currently w
 8.  npm run start
 
 9.  Open in browser http://localhost:3000
+
+---
+
+### SCREENSHOTS
+
+Featured products
+
+![featured](frontend/public/screenshots/featuredproducts.png)
+
+Product view
+
+![product](frontend/public/screenshots/product.png)
+
+Cart view
+
+![cart](frontend/public/screenshots/cart.png)
+
+Sign In
+
+![signin](frontend/public/screenshots/signin.png)
