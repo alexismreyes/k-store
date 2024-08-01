@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useEffect, useReducer, useState } from 'react';
+import { useEffect, useReducer } from 'react';
 
 import Product from '../components/Product';
 import { Col, Row } from 'react-bootstrap';
