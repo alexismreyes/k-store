@@ -1,5 +1,22 @@
-const data = {
-  products: [
+import argon2 from 'argon2';
+
+async function createData() {
+  const users = [
+    {
+      name: 'Alexis',
+      email: 'malexismreyes@gmail.com',
+      password: await argon2.hash('123456789'),
+      isAdmin: true,
+    },
+    {
+      name: 'customer',
+      email: 'mikemanzano27@hotmail.com',
+      password: await argon2.hash('123456789'),
+      isAdmin: false,
+    },
+  ];
+
+  const products = [
     {
       //_id: '1',
       name: 'Nike Slim shirt',
@@ -65,7 +82,9 @@ const data = {
       numReviews: 6,
       description: 'high quality woman cotton shirt',
     },
-  ],
-};
+  ];
 
-export default data;
+  return { users, products };
+}
+
+export default createData;

@@ -16,7 +16,7 @@ mongoose
   }); //connect to string
 
 const app = express();
-//app.use('/api/seed', seedRouter);
+app.use('/api/seed', seedRouter);
 app.use('/api/products', productRouter);
 
 //keeping this for future reference....was updating to productRouter version
