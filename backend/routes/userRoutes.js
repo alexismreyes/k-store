@@ -11,11 +11,11 @@ userRouter.post(
   expressAsyncHandler(async (req, res) => {
     const user = await User.findOne({ email: req.body.email });
 
-    console.log('user found!!!');
     console.log('req.body.password->', req.body.password);
-    console.log('user.password->', user.password);
 
     if (user) {
+      console.log('user found!!!');
+      console.log('user.password->', user.password);
       if (await argon2.verify(user.password, req.body.password)) {
         res.send({
           _id: user._id,
