@@ -32,6 +32,8 @@ Its made using MERN (Mongo - Express.js - React - Node.js) - (**_I'm currently w
 
 **_- font-awesome_**
 
+**_- react-toastify to beautify alerts_**
+
 ---
 
 ### Backend:
@@ -39,6 +41,10 @@ Its made using MERN (Mongo - Express.js - React - Node.js) - (**_I'm currently w
 **_- MongoDB for database for persistence_**
 
 **_- Express.js server_**
+
+**_- Argon2 library to hash user password_**
+
+**_- jsonwebtoken_**
 
 ---
 
@@ -61,7 +67,7 @@ Its made using MERN (Mongo - Express.js - React - Node.js) - (**_I'm currently w
 ### Create your own .env file for database credentials
 
 - Create a .env file inside backend
-- Create a MONGODB*URI for mongo's connection string, you can create an online mongo db at atlas or using a local version or dockerized one (docker-compose.yml already provided at backend folder just use command -> \*\*\_docker-compose up -d*\*\*).
+- Create a MONGODB\*URI for mongo's connection string, you can create an online mongo db at atlas or using a local version or dockerized one (docker-compose.yml already provided at backend folder just use command -> **_docker-compose up -d_**.
 
 - .env-example is provided in the code repo
 
