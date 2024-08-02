@@ -62,6 +62,8 @@ Its made using MERN (Mongo - Express.js - React - Node.js) - (**_I'm currently w
 
 **_-Data retrieved from Mongo_**
 
+**_-User loggin using jwt_** (you can check the users in backend/data.js or create your own users in the mongo database)
+
 ---
 
 ### Create your own .env file for database credentials
